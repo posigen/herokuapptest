@@ -4,7 +4,7 @@
     "description": "a Sails application running on Heroku",
     "main": ".app.js",
     "dependencies": {
-        "sails": "0.8.895"
+        "sails": "~0.11.0"
     },
     "scripts": {
         "start": "node .app.js",
