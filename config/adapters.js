@@ -5,11 +5,10 @@ module.exports.adapters = {
 
 	// If you leave the adapter config unspecified 
 	// in a model definition, 'default' will be used.
-	'default': 'mongo',
+	'default': 'somePostgresqlServer',
 	
 	mongo: {
-		module   : 'sails-mongo',
-		url      : process.env.MONGOLAB_URI || 'mongodb://localhost:27017/sails'
+		
 	},
 	
 	// In-memory adapter for DEVELOPMENT ONLY
@@ -29,6 +28,22 @@ module.exports.adapters = {
 		filePath: './.tmp/dirty.db',
 		inMemory: false
 	},
+	
+	  somePostgresqlServer: {
+		  module: 'sails-postgresql',
+			ssl: true,
+		    host: 'ec2-50-16-229-89.compute-1.amazonaws.com',
+		    user: 'uuvbhdgpsgnjij',
+		    password: 'VMjnyKEN6nGzyutyWZ_ucuENCY',
+		    database: 'dfcd2jg7claaiu'
+		    	//host: 'localhost',
+		    	//port: 5432,
+		    	//ssl: false,
+		    	//poolSize: 10,
+		    	//user: 'postgres',
+		    	//password: 'postgres123',
+		    	//database: 'testheroku'
+		  },
 
 	// MySQL is the world's most popular relational database.
 	// Learn more: http://en.wikipedia.org/wiki/MySQL

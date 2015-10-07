@@ -34,6 +34,7 @@ npm-debug.log
 .DS_STORE
 .netbeans
 nbproject
+node_modules
 .idea
 
 
